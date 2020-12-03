@@ -392,6 +392,9 @@ public class ConsoleAcsClient implements IAcsClient {
         imutableMap.put("Version", map.remove("Version"));
         imutableMap.put("Format", map.remove("Format"));
         imutableMap.put("Params", new Gson().toJson(map));
+        String endpointRegionId = rpcAcsRequest.getSysRegionId() != null ? rpcAcsRequest.getSysRegionId()
+            : this.clientProfile.getRegionId();
+        imutableMap.put("RegionId", endpointRegionId);
         if (null != signer && null != credentials) {
             String accessKeyId = credentials.getAccessKeyId();
             String accessSecret = credentials.getAccessKeySecret();
