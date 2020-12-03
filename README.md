@@ -20,7 +20,7 @@ SDK，这样就形成了 企业工作台定制 Client + 官网 SDK 提供 APIMET
 <dependency>
     <groupId>com.aliyun</groupId>
     <artifactId>aliyun-java-sdk-console-bench</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
